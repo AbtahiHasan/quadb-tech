@@ -2,24 +2,14 @@ import { useEffect } from "react";
 import { useState } from "react";
 import ShowCard from "../components/ShowCard";
 import "../styles/style.css"
+import useShows from "../hooks/useShows";
 
 const Home = () => {
-    const [shows, setShows] = useState([])
-    const getShows =  async () => {
-        const res = await fetch("https://api.tvmaze.com/search/shows?q=all")
-        const data = await res.json()
-        setShows(data)
-    }
-
-    console.log(shows)
-
-    useEffect(() => {
-        getShows()
-    }, [])
+   const {shows} = useShows()
 
 
     return (
-        <main className="">
+        <main className="container">
             {
                 shows.map((show, key) => <ShowCard key={key} show={show} />)
             }
