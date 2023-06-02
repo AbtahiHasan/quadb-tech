@@ -15,7 +15,7 @@ const ShowDetails = () => {
             <section>
                 <img src={show?.show?.image?.medium} alt="" />
             </section>
-            <section>
+            <section className="details-card">
                 <h2 className="my-3">{show?.show?.name}</h2>
                 <p className="my-3"><span className="font-bold">language: </span> {show?.show?.language}  </p>
                 <p className="my-3"><span className="font-bold">type: </span> {show?.show?.type}  </p>
@@ -25,6 +25,7 @@ const ShowDetails = () => {
                 <p className="my-3"><span className="font-bold">days: </span> {show?.show?.schedule?.days}  </p>
                 <p className="my-3"><span className="font-bold">rating: </span> {show?.show?.rating?.average || "not available"} </p>
                 {show?.show?.summary}
+                <button className="my-3 btn">book a movie ticket</button>
             </section>
         </main>
     );
