@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import useShows from "../hooks/useShows";
 
 
@@ -13,6 +13,7 @@ const ShowDetails = () => {
     return (
         <main className="show-details container">
             <section>
+                <button className="back-btn"><Link to="/">Back To Home</Link></button>
                 <img src={show?.show?.image?.medium} alt="" />
             </section>
             <section className="details-card">

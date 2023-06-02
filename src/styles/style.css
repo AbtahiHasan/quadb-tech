@@ -38,6 +38,23 @@
 .my-3 {
     margin: 10px 0;
 }
+.back-btn {
+    background: #30A2FF;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    margin: 10px 0;
+    cursor: pointer;
+
+}
+
+.back-btn > a {
+    color: white
+}
+
+a {
+    text-decoration: none;
+}
 /* card style  */
 .show-card {
     border: 1px solid #ccc;
